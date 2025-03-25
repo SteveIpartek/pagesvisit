@@ -1,0 +1,119 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+
+}
+
+body {
+	line-height: 1;
+  }
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center
+    
+}
+.content{
+    margin: 20px;
+    margin-top: 40px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    background-color: rgb(202, 225, 150 ,0.75);
+    width: 400px;
+    border-radius: 10px;
+    border:2.5px solid black;
+}
+
+
+h1{
+    font-size: 30px;
+    text-decoration: underline 2px;
+    padding-bottom: 10px;
+}
+
+#contadorVisitas {
+    animation: ani1 .8s 1;
+  }
+  
+  @keyframes ani1 {
+    
+    0% { font-size: 16px;}
+    25% {font-size: 18px; }
+    50% { font-size: 20px; font-weight: bold; }
+    75% { font-size: 18px;}
+    100% { font-size: 16px;}
+
+}
+button {
+    /* Estilos base del botón */
+    
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Transiciones suaves */
+}
+
+/* Animación para el hover (cuando el ratón entra) */
+button:hover {
+    animation: buttonAni2 1s forwards;
+}
+
+@keyframes buttonAni2 {
+    0% { transform: scale(1) rotate(0deg);}
+    5%{transform: scale(1) rotate(0deg); background-color: rgb(255, 192, 192);}
+    50% { transform: scale(1.25) rotate(180deg); background-color: rgb(255, 84, 84); color: grey; }
+    100% { transform: scale(1.5) rotate(360deg); background-color: red; color: white; font-weight: bold; }
+}
+
+/* Animación para el unhover (cuando el ratón sale) */
+button:not(:hover) {
+    animation: buttonAni3 1s forwards;
+}
+
+@keyframes buttonAni3 {
+    0% { transform: scale(1.5) rotate(360deg); background-color: red; color: white; font-weight: bold; }
+    50% { transform: scale(1.25) rotate(180deg); background-color: rgb(255, 84, 84); color: grey; }
+    95%{transform: scale(1) rotate(0deg); background-color: rgb(255, 192, 192);}
+    100% { transform: scale(1) rotate(0deg)};
+}
+
+
+
